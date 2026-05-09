@@ -1,0 +1,10 @@
+#!/bin/sh
+# Remove Co-authored-by trailers so only the primary author is credited on Git hosts.
+msgfile=$1
+[ -n "$msgfile" ] && [ -f "$msgfile" ] || exit 0
+tmp="${msgfile}.tmp.$$"
+if ! grep -q '^Co-authored-by:' "$msgfile"; then
+	exit 0
+fi
+grep -v '^Co-authored-by:' "$msgfile" >"$tmp" && mv -f "$tmp" "$msgfile"
+exit 0

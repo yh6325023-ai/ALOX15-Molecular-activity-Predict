@@ -1,0 +1,33 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter / notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE/editor settings
+.idea/
+
+# Local OS files
+.DS_Store
+Thumbs.db
+
+# Runtime artifacts
+*.log
+
+# Large data/model artifacts (avoid GitHub size limits)
+data/pretrain/*.smi
+models/*.joblib
+models/fold_models/
+

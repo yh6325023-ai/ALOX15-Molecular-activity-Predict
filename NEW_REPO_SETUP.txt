@@ -1,0 +1,18 @@
+新建空 GitHub 仓库并上传（全新历史，单条初始提交）
+
+1) 网页打开 https://github.com/new ，新建仓库：
+   - 名称自定（例如 ALOX15-Molecular-Activity-Prediction-Model）
+   - 不要勾选 README、.gitignore、License（保持仓库完全空）
+
+2) 在本项目根目录打开终端，若曾绑定过旧远程，先删掉：
+   git remote remove origin
+
+3) 添加新仓库地址并推送（把 URL 换成你的）：
+   git remote add origin https://github.com/你的用户名/新仓库名.git
+   git branch -M main
+   git push -u origin main
+
+4) 克隆到新电脑后，建议执行一次（启用提交钩子，自动去掉 Co-authored-by 行）：
+   git config core.hooksPath scripts/githooks
+
+详见 scripts/githooks/INSTALL.txt（代理可选）。

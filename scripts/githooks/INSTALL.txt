@@ -1,0 +1,10 @@
+One-time setup after clone (run in repo root):
+
+  git config core.hooksPath scripts/githooks
+
+If git cannot reach GitHub, set the same HTTP proxy port as your browser/VPN (example Clash 7890):
+
+  git config http.proxy http://127.0.0.1:7890
+  git config http.version HTTP/1.1
+
+To disable proxy later: git config --unset http.proxy
